@@ -1,0 +1,607 @@
+@charset "UTF-8";
+/* Цвет текста */
+/* основные цвета сайта */
+/* черный и белый цвета сайта */
+/* тень для кнопок */
+/* ширина сетки */
+/* отступ между колонками для grid*/
+/* размер текста */
+/* Стили ссылок */
+/* clearfix для float */
+/* Grid */
+/* Создаем миксин с медиаправилом. В аргументе миксина указываются несколько брекпоинтов (названия произвольные):
+ *  - phone
+ *  - tab-port
+ *  - tab-land
+ *  - big-screen
+ *       */
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* Поскольку используем max-width, то медиаправила записываются от большего разрешения к меньшему и в конце пишется правило под min-width */
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+  /* only screen означает, что правило сработает только для экранов (на печать, например, не сработает) */
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+}
+@media only screen and (max-width: 1240px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 30%;
+  }
+}
+
+body {
+  background-color: #F5F5F5;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  background-color: #f7f7f7;
+  position: relative;
+  max-width: 120rem;
+  z-index: 0;
+  margin: auto;
+}
+
+body {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 3.3rem;
+  letter-spacing: 0.022rem;
+  color: #4D5053;
+}
+
+.paragraph {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 3.3rem;
+  letter-spacing: 0.022rem;
+  color: #4D5053;
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+}
+@media only screen and (max-width: 1240px) {
+  .paragraph {
+    font-size: 2rem;
+  }
+}
+
+.title-s2 {
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 39px;
+  text-align: center;
+  letter-spacing: 0.22px;
+  color: #292F36;
+}
+
+.title-s3 {
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 65px;
+  letter-spacing: 0.22px;
+  color: #292F36;
+}
+
+/* выравнивание текста в обертке */
+.text-align-center {
+  text-align: center;
+}
+
+/* отступы */
+.margin-bottom-10px {
+  margin-bottom: 1rem;
+}
+
+.margin-bottom-30px {
+  margin-bottom: 3rem;
+}
+
+.margin-bottom-50px {
+  margin-bottom: 5rem;
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+}
+@media only screen and (max-width: 900px) {
+  .margin-bottom-50px {
+    margin-bottom: 7rem;
+  }
+}
+
+.margin-bottom-80px {
+  margin-bottom: 8rem;
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+}
+@media only screen and (max-width: 900px) {
+  .margin-bottom-80px {
+    margin-bottom: 5rem;
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10.6rem;
+  background-color: #FFFFFF;
+}
+
+.navigation__list {
+  width: 51.8rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation__link {
+  text-decoration: none;
+}
+.navigation__link:link, .navigation__link:visited {
+  color: #292F36;
+}
+.navigation__link:hover {
+  color: #CDA274;
+}
+
+.row {
+  max-width: 120rem;
+  margin: 0 auto;
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+}
+.row:not(:last-child) {
+  margin-bottom: 0rem;
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+}
+@media only screen and (max-width: 900px) {
+  .row:not(:last-child) {
+    margin-bottom: 0rem;
+  }
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media only screen and (max-width: 1240px) {
+  .row {
+    max-width: 90.1rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .row {
+    max-width: 60rem;
+  }
+}
+
+.col-1-of-2 {
+  /* формула: кол-во спаренных колонок * ширина одной колонки + кол-во промежутков*/
+  width: calc(1 * ((100% - (2 - 1) * 0rem) / 2) + (1 - 1) * 0rem);
+  float: left;
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+}
+.col-1-of-2:not(:last-child) {
+  margin-right: 0rem;
+}
+@media only screen and (max-width: 1240px) {
+  .col-1-of-2 {
+    width: calc(1 * ((100% - (2 - 1) * 0rem) / 2) + (1 - 1) * 0rem);
+  }
+  .col-1-of-2:not(:last-child) {
+    margin-right: 0rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .col-1-of-2 {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 4rem;
+  }
+}
+
+.col-1-of-3 {
+  /* формула: кол-во спаренных колонок * ширина одной колонки + кол-во промежутков*/
+  width: calc(1 * ((100% - (3 - 1) * 0rem) / 3) + (1 - 1) * 0rem);
+  float: left;
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+}
+.col-1-of-3:not(:last-child) {
+  margin-right: 0rem;
+}
+@media only screen and (max-width: 1240px) {
+  .col-1-of-3 {
+    width: calc(1 * ((100% - (3 - 1) * 0rem) / 3) + (1 - 1) * 0rem);
+  }
+  .col-1-of-3:not(:last-child) {
+    margin-right: 0rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .col-1-of-3 {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 4rem;
+  }
+}
+
+.col-2-of-3 {
+  /* формула: кол-во спаренных колонок * ширина одной колонки + кол-во промежутков*/
+  width: calc(2 * ((100% - (3 - 1) * 0rem) / 3) + (2 - 1) * 0rem);
+  float: left;
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+}
+.col-2-of-3:not(:last-child) {
+  margin-right: 0rem;
+}
+@media only screen and (max-width: 1240px) {
+  .col-2-of-3 {
+    width: calc(2 * ((100% - (3 - 1) * 0rem) / 3) + (2 - 1) * 0rem);
+  }
+  .col-2-of-3:not(:last-child) {
+    margin-right: 0rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .col-2-of-3 {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 4rem;
+  }
+}
+
+.col-1-of-4 {
+  /* формула: кол-во спаренных колонок * ширина одной колонки + кол-во промежутков*/
+  width: calc(1 * ((100% - (4 - 1) * 0rem) / 4) + (1 - 1) * 0rem);
+  float: left;
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+}
+.col-1-of-4:not(:last-child) {
+  margin-right: 0rem;
+}
+@media only screen and (max-width: 1240px) {
+  .col-1-of-4 {
+    width: calc(1 * ((100% - (4 - 1) * 0rem) / 4) + (1 - 1) * 0rem);
+  }
+  .col-1-of-4:not(:last-child) {
+    margin-right: 0rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .col-1-of-4 {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 4rem;
+  }
+}
+
+.col-2-of-4 {
+  /* формула: кол-во спаренных колонок * ширина одной колонки + кол-во промежутков*/
+  width: calc(2 * ((100% - (4 - 1) * 0rem) / 4) + (2 - 1) * 0rem);
+  float: left;
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+}
+.col-2-of-4:not(:last-child) {
+  margin-right: 0rem;
+}
+@media only screen and (max-width: 1240px) {
+  .col-2-of-4 {
+    width: calc(2 * ((100% - (4 - 1) * 0rem) / 4) + (2 - 1) * 0rem);
+  }
+  .col-2-of-4:not(:last-child) {
+    margin-right: 0rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .col-2-of-4 {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 4rem;
+  }
+}
+
+.col-3-of-4 {
+  /* формула: кол-во спаренных колонок * ширина одной колонки + кол-во промежутков*/
+  width: calc(3 * ((100% - (4 - 1) * 0rem) / 4) + (3 - 1) * 0rem);
+  float: left;
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+}
+.col-3-of-4:not(:last-child) {
+  margin-right: 0rem;
+}
+@media only screen and (max-width: 1240px) {
+  .col-3-of-4 {
+    width: calc(3 * ((100% - (4 - 1) * 0rem) / 4) + (3 - 1) * 0rem);
+  }
+  .col-3-of-4:not(:last-child) {
+    margin-right: 0rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .col-3-of-4 {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 4rem;
+  }
+}
+
+.wrapper-white {
+  max-width: 144rem;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-about {
+  height: 83.1rem;
+  background: url(../../src/img/bg-img.png) center/cover no-repeat;
+  margin-bottom: 8.5rem;
+}
+.section-about__wrapper {
+  position: relative;
+}
+.section-about__content {
+  position: absolute;
+  top: 19.5rem;
+  left: 12rem;
+  width: 60rem;
+  height: 38.6rem;
+}
+.section-about__content h1 {
+  font-family: "DM Serif Display";
+  font-weight: 400;
+  font-size: 8rem;
+  line-height: 9.6rem;
+  letter-spacing: 0.022rem;
+  color: #292F36;
+  margin-bottom: 1.9rem;
+}
+.section-about__text {
+  margin-bottom: 3.5rem;
+}
+
+.section-about__button {
+  position: relative;
+  background-color: #292F36;
+  width: 20.7rem;
+  height: 7.1rem;
+  border: 2px solid #292F36;
+  border-radius: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+.section-about__button p {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.72px;
+  color: #FFFFFF;
+  padding-left: 3.4rem;
+  margin-right: 2.1rem;
+}
+
+.section-about__arr {
+  height: 7.1rem;
+  position: relative;
+}
+.section-about__arr_h {
+  position: absolute;
+  top: 3.5rem;
+  right: 2.2rem;
+}
+.section-about__arr_v {
+  position: absolute;
+  top: 1.8rem;
+  right: 2rem;
+}
+
+.section-2 {
+  height: 39.5rem;
+  margin-bottom: 11.5rem;
+}
+.section-2__wrapper {
+  background-color: #FFFFFF;
+}
+.section-2__title {
+  padding-top: 7.5rem;
+  margin-bottom: 1.7rem;
+}
+.section-2__text {
+  display: block;
+  text-align: center;
+}
+.section-2__text_1 {
+  padding-left: 4.2rem;
+  padding-right: 4.1rem;
+  margin-bottom: 4.8rem;
+}
+.section-2__text_2 {
+  padding-left: 5.2rem;
+  padding-right: 5.1rem;
+  margin-bottom: 1.5rem;
+}
+.section-2__text_3 {
+  padding-left: 5.2rem;
+  padding-right: 5.2rem;
+  margin-bottom: 1.5rem;
+}
+.section-2__link {
+  display: block;
+  margin: 0 auto;
+  width: 32rem;
+  height: 4.7rem;
+  text-align: center;
+  text-decoration: none;
+  color: #4D5053;
+}
+.section-2__link span {
+  color: #CDA274;
+  padding-left: 0.6rem;
+}
+
+.section-3 {
+  height: 63.5rem;
+  margin-bottom: 13.9rem;
+}
+.section-3__wrapper {
+  position: relative;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-3__img {
+  display: block;
+  width: 53.2rem;
+  height: 63.4rem;
+}
+.section-3__content {
+  width: 59.2rem;
+  height: 58.1rem;
+}
+.section-3__title {
+  padding-top: 1.3rem;
+  margin-bottom: 4.2rem;
+}
+.section-3__text {
+  text-align: left;
+  display: block;
+  width: 49.1rem;
+  margin-bottom: 4rem;
+}
+.section-3__call-us {
+  width: 53.2rem;
+  height: 9.3rem;
+  display: flex;
+  justify-content: left;
+  margin-bottom: 5rem;
+}
+.section-3__callpic {
+  width: 9.3rem;
+  height: 9.3rem;
+  background-color: #F4F0EC;
+  border-radius: 5rem;
+  position: relative;
+  margin-right: 2rem;
+}
+.section-3__callpic svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section-3__calltext {
+  width: 15.4rem;
+  height: 7.9rem;
+  padding-top: 0.6rem;
+}
+.section-3__telnum {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.22px;
+  color: #4D5053;
+}
+.section-3__teltext {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 0.22px;
+}
+
+.section-3__button {
+  position: relative;
+  background-color: #292F36;
+  width: 26.3rem;
+  height: 7.1rem;
+  border: 2px solid #292F36;
+  border-radius: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+.section-3__button p {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.72px;
+  color: #FFFFFF;
+  padding-left: 3.4rem;
+  margin-right: 2.1rem;
+}
+
+.section-3__arr {
+  height: 7.1rem;
+  position: relative;
+}
+.section-3__arr_h {
+  position: absolute;
+  top: 3.5rem;
+  right: 3.5rem;
+}
+.section-3__arr_v {
+  position: absolute;
+  top: 1.8rem;
+  right: 2.3rem;
+}/*# sourceMappingURL=style.css.map */

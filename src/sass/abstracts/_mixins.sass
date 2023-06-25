@@ -1,0 +1,54 @@
+/* Стили ссылок */
+@mixin style-link($color)
+    display: inline-block
+    text-transform: uppercase
+    text-decoration: none
+    color: $color
+
+/* clearfix для float */
+@mixin clearfix
+    &::after
+        content: ""
+        display: table
+        clear: both
+
+/* Grid */
+@mixin col($quantity, $columns)
+    &:not(:last-child)
+        margin-right: $gutter-gorizontal
+    /* формула: кол-во спаренных колонок * ширина одной колонки + кол-во промежутков*/
+    width: calc(#{$quantity} * ((100% - (#{$columns} - 1) * #{$gutter-gorizontal}) / #{$columns}) + (#{$quantity} - 1) * #{$gutter-gorizontal})
+    float: left
+    @include respond(tab-land)
+        &:not(:last-child)
+            margin-right: $gutter-gorizontal-tab-land
+        width: calc(#{$quantity} * ((100% - (#{$columns} - 1) * #{$gutter-gorizontal-tab-land}) / #{$columns}) + (#{$quantity} - 1) * #{$gutter-gorizontal-tab-land})
+    @include respond(tab-port)
+        width: 100%
+        margin-right: 0 !important
+        margin-bottom: 4rem
+
+/* Создаем миксин с медиаправилом. В аргументе миксина указываются несколько брекпоинтов (названия произвольные):
+    - phone
+    - tab-port
+    - tab-land
+    - big-screen
+         */
+@mixin respond($breakpoint)
+    @if $breakpoint == phone
+        /* only screen означает, что правило сработает только для экранов (на печать, например, не сработает) */
+        @media only screen and (max-width: 600px)
+            @content
+
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 900px)
+            @content
+
+    @if $breakpoint == tab-land
+        @media only screen and (max-width: 1240px)
+            @content
+    /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+    /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+    @if $breakpoint == big-screen
+        @media only screen and (min-width: 1800px)
+            @content

@@ -1,0 +1,30 @@
+.row
+    max-width: $grid-width
+    margin: 0 auto
+    &:not(:last-child)
+        margin-bottom: 0rem
+        @include respond(tab-port)
+            margin-bottom: 0rem
+    @include clearfix
+    @include respond(tab-land)
+        max-width: 90.1rem
+    @include respond(tab-port)
+        max-width: 60rem
+
+.col-1-of-2
+   @include col(1, 2)
+
+.col-1-of-3
+    @include col(1, 3) 
+
+.col-2-of-3
+    @include col(2, 3)
+
+.col-1-of-4
+    @include col(1, 4)
+
+.col-2-of-4
+    @include col(2, 4)
+
+.col-3-of-4
+    @include col(3, 4)

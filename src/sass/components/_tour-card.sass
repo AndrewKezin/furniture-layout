@@ -1,0 +1,130 @@
+.card-tour
+    height: 50rem
+    /* эффект приближения-отдаления сторон карточки при перевороте */
+    perspective: 150rem
+    -moz-perspective: 150rem
+    position: relative
+    @media only screen and (max-width: 900px), (hover: none)
+        height: auto
+    
+    &__side
+        height: 50rem
+        /* ease-out - притормаживает в конце трансформации */
+        transition: .5s all ease-out
+        color: white
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        backface-visibility: hidden
+        box-shadow: $box-shadow-light
+        border-radius: .5rem
+        overflow: hidden
+        @media only screen and (max-width: 900px), (hover: none)
+            height: auto
+            position: relative
+            padding-bottom: 13rem
+        &_front
+            @media only screen and (max-width: 900px), (hover: none)
+                padding-bottom: 13rem
+        &_back
+            background: linear-gradient(156.85deg, $color-brown-light 3.65%, $color-brown-dark 100%)
+            transform: rotateY(180deg)
+            /* Это медиаправило дополнено отсутствием возможности наведения (для мобильных устройств), миксин в этом случае не сработает */
+            @media only screen and (max-width: 900px), (hover: none)
+                transform: rotate(0deg)
+                padding: 5rem
+                padding-top: 12rem
+                margin-top: -11rem
+                clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%)
+            
+    &:hover &__side_front
+        transform: rotateY(-180deg)
+        @include respond(tab-port)
+            transform: rotate(0deg)
+    &:hover &__side_back
+        transform: rotateY(0deg)
+
+    &__img
+        /* наложение фильтра на изображение */
+        background-blend-mode: hard-light
+        height: 21rem
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+        &_1
+            background: $color-brown-light url(../img/card-1.jpg) center / cover no-repeat   
+        &_2
+            background: $color-brown-light url(../img/card-2.jpg) center / cover no-repeat
+        &_3
+            background: $color-brown-light url(../img/card-3.jpg) center / cover no-repeat
+        @media only screen and (max-width: 900px), (hover: none)
+            height: 30rem
+            
+    &__title
+        font-size: 2.8rem
+        letter-spacing: .2rem
+        font-weight: 300
+        text-transform: uppercase
+        text-align: right
+        position: absolute
+        top: 17rem
+        right: 0
+        @include respond(tab-port)
+            top: 25rem
+            font-size: 3.8rem
+    &__span
+        background: linear-gradient(90deg, $color-brown-light, $color-brown-dark)
+        padding: 1rem 2rem .3rem 2rem
+        &_1
+        &_2
+            position: absolute
+            top: 3.3rem
+            right: 0
+            padding-bottom: 1rem
+            padding-top: 0
+            @include respond(tab-port)
+                top: 4.5rem
+
+    &__descr
+        ul
+            list-style: none
+            margin: 0 auto
+            width: 80%
+            text-align: center
+            li
+                display: inline-block
+                font-size: $font-size-paragraph
+                font-weight: 700
+                letter-spacing: .2rem
+                color: $color-gray
+                border-bottom: 1px solid $color-gray
+                &:not(:last-child)
+                    margin-bottom: 2rem
+                @include respond(tab-land)
+                    font-size: 1.5rem
+                @include respond(tab-port)
+                    font-size: 2rem
+
+    &__backSide-box
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        @media only screen and (max-width: 900px), (hover: none)
+            position: relative
+            top: 0
+            left: 0
+            transform: translate(0%, 0%)
+            text-align: center
+    &__text
+        margin-bottom: 8rem
+        letter-spacing: .2rem
+        text-transform: uppercase
+        text-align: center
+        color: $color-white
+        &_1
+            font-size: $font-size-paragraph
+            font-weight: 300
+        &_2
+            font-size: 6rem
+            font-weight: 500
+
