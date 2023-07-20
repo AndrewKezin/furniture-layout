@@ -1,53 +1,55 @@
-.feedBack-card
-    width: 85%
-    background: rgba($color-white, 0.75)
-    box-shadow: $box-shadow-light
-    margin: 0 auto
-    padding: 6rem
-    transform: skewX(330deg)
-    @include respond(tab-port)
-        transform: skewX(350deg)
-        padding: 3rem
-    & > *
-        transform: skewX(-330deg)
-        @include respond(tab-port)
-            transform: skewX(-350deg)
-            text-align: center
-    &__img
-        width: 15rem
-        height: 15rem
-        float: left
-        border-radius: 100rem
-        /* обтекание текста (настроено с clip-path)*/
-        shape-outside: circle(50% at 50% 50%)
-        -webkit-shape-outside: circle(50% at 50% 50%)
-        margin-right: 4rem
-        overflow: hidden
-        position: relative
-        @include respond(tab-port)
-            /* Отменяем float-позиционирование */
-            float: none
-            margin: 0 auto
-            margin-bottom: 3rem
-        img
-            height: 100%
-            transform: scale(1.2)
-            transition: all .5s
+.feedback-cards
+    display: flex
+    justify-content: center
+
+    &__card
+        margin-right: 1.8rem
+        background-color: #fff
+        border-radius: 3rem
+        width: 35.4rem
+        height: 28.7rem
+        padding: 4.9rem 3rem 4.5rem 3.5rem
+    &__topwrapper
+        display: flex
+    &__photo
+        width: 7.7rem
+        margin-right: 2rem
+        margin-bottom: 2.5rem
+    &__names
+        width: 14.4rem
+        height: 6.4rem
+        padding-top: 0.5rem
     &__name
-        text-align: center
-        font-size: 2rem
-        letter-spacing: 0.2rem
+        color: #292F36
+        font-family: DM Serif Display
+        font-size: 2.5rem
+        font-style: normal
         font-weight: 400
-        color: $color-white
-        position: absolute
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -20%)
-        opacity: 0
-        transition: all .5s
-    &:hover &__name
-        transform: translate(-50%, -50%)
-        opacity: 1
-    &:hover img
-        transform: scale(1)
-        filter: blur(.3rem) brightness(70%)
+        line-height: 3.75rem
+        letter-spacing: .022rem
+    &__city
+        color: #4D5053
+        font-family: Jost
+        font-size: 1.8rem
+        font-style: normal
+        font-weight: 400
+        line-height: 2.7rem
+        letter-spacing: .022rem
+    &__feedback
+        display: block
+        color: #4D5053
+        font-family: Jost
+        font-size: 2rem
+        font-style: normal
+        font-weight: 400
+        line-height: 3rem
+        letter-spacing: .022rem
+        &_1
+            width: 24.4rem
+            height: 9rem
+        &_2
+            width: 25.6rem
+            height: 9rem
+        &_3
+            width: 27.4rem
+            height: 9rem
