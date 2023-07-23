@@ -1,0 +1,87 @@
+.blogs
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: 21.8rem 55.5rem 55.5rem
+    column-gap: 2rem
+    padding-top: 1.3rem
+    &__title
+        grid-area: 1 / 1 / 2 / 4
+        h5
+            color: #292F36
+            text-align: center
+            font-family: DM Serif Display
+            font-size: 4.8rem
+            font-style: normal
+            font-weight: 400
+            line-height: 6.24rem
+            letter-spacing: 0.022rem
+            margin-bottom: 2.1rem
+        p
+            color: #4D5053
+            text-align: center
+            font-family: Jost
+            font-size: 2.2rem
+            font-style: normal
+            font-weight: 400
+            line-height: 3.3rem
+            letter-spacing: 0.022rem
+
+    &__card
+        padding-top: 2.1rem
+        padding-left: 2.1rem
+        &__img
+            width: 34.5rem
+            height: 29.6rem
+            margin-bottom: 1.5rem
+        &_1
+            grid-area: 2 / 1 / 3 / 2
+        &_2
+            grid-area: 2 / 2 / 3 / 3
+        &_3
+            grid-area: 2 / 3 / 3 / 4
+        &_4
+            grid-area: 3 / 1 / 4 / 2
+        &_5
+            grid-area: 3 / 2 / 4 / 3
+        &_6
+            grid-area: 3 / 3 / 4 / 4
+    &__description
+        color: #292F36
+        font-family: DM Serif Display
+        font-size: 2.5rem
+        font-style: normal
+        font-weight: 400
+        line-height: 3.5rem
+        letter-spacing: 0.05rem
+        margin-bottom: 1rem
+    &__cardbottom
+        width: 34.5rem
+        height: 6.2rem
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-top: 0.96rem
+    &__date
+        color: #4D5053
+        font-family: Jost
+        font-size: 1.6rem
+        font-style: normal
+        font-weight: 400
+        line-height: 2.4rem
+        letter-spacing: 0.022rem
+    &__button
+        position: relative
+        width: 5.2rem
+        height: 5.2rem
+        border-radius: 10rem
+        background: #F4F0EC
+    &__buttonarrow
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &__link
+        text-decoration: none
+        display: block
+        width: 5.2rem
+        height: 5.2rem
