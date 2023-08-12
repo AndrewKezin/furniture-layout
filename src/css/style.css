@@ -65,6 +65,22 @@ a {
   margin: auto;
 }
 
+@font-face {
+  font-family: "Jost";
+  src: local("Jost");
+  src: url("fonts/Jost-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Serif Display";
+  src: local("DM Serif Display");
+  src: url("fonts/DMSerifDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   font-family: "Jost";
   font-style: normal;
@@ -113,48 +129,18 @@ body {
   color: #292F36;
 }
 
-/* выравнивание текста в обертке */
-.text-align-center {
-  text-align: center;
-}
-
-/* отступы */
-.margin-bottom-10px {
-  margin-bottom: 1rem;
-}
-
-.margin-bottom-30px {
-  margin-bottom: 3rem;
-}
-
-.margin-bottom-50px {
-  margin-bottom: 5rem;
-  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
-  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
-}
-@media only screen and (max-width: 900px) {
-  .margin-bottom-50px {
-    margin-bottom: 7rem;
-  }
-}
-
-.margin-bottom-80px {
-  margin-bottom: 8rem;
-  /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
-  /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
-}
-@media only screen and (max-width: 900px) {
-  .margin-bottom-80px {
-    margin-bottom: 5rem;
-  }
-}
-
 .header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10.6rem;
   background-color: #FFFFFF;
+}
+.header__logolink {
+  width: 17.7rem;
+  height: 5rem;
+  display: block;
+  text-decoration: none;
 }
 
 .navigation__list {
@@ -376,6 +362,131 @@ body {
   }
 }
 
+.footer {
+  height: 60.8rem;
+  padding-top: 5rem;
+}
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__top {
+  display: flex;
+  height: 37.4rem;
+  margin-bottom: 8rem;
+}
+.footer__interno {
+  width: 39.3rem;
+  margin-right: 1.6rem;
+}
+.footer__pages {
+  width: 21rem;
+  margin-right: 1.6rem;
+}
+.footer__explore {
+  width: 21rem;
+  margin-right: 1.6rem;
+}
+.footer__contact {
+  width: 33.7rem;
+}
+.footer__socials {
+  width: 33.3rem;
+  height: 5.3rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.footer__icon:not(:last-child) {
+  margin-right: 4rem;
+}
+.footer__bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interno__logo {
+  width: 17.7rem;
+  margin-bottom: 1.5rem;
+}
+.interno__text {
+  width: 32.6rem;
+  margin-bottom: 0.98rem;
+}
+
+.footer-menu__title {
+  color: #292F36;
+  font-family: DM Serif Display;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.75rem;
+  letter-spacing: 0.022rem;
+  margin-bottom: 2.1rem;
+}
+.footer-menu__text {
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.3rem;
+  letter-spacing: 0.022rem;
+}
+.footer-menu__text_link {
+  color: #CDA274;
+  text-decoration: none;
+  padding-left: 0.5rem;
+  margin-right: 1rem;
+}
+.footer-menu__item {
+  list-style: none;
+  margin-bottom: 3rem;
+}
+.footer-menu__link {
+  text-decoration: none;
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.3rem;
+  letter-spacing: 0.022rem;
+}
+
+.contact__title {
+  color: #292F36;
+  font-family: DM Serif Display;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.75rem;
+  letter-spacing: 0.022rem;
+  margin-bottom: 2.2rem;
+}
+.contact__text {
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.3rem;
+  letter-spacing: 0.022rem;
+  margin-bottom: 2.9rem;
+}
+.contact__link {
+  text-decoration: none;
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.3rem;
+  letter-spacing: 0.022rem;
+}
+
 .feedback-cards {
   display: flex;
   justify-content: center;
@@ -397,7 +508,7 @@ body {
   margin-bottom: 2.5rem;
 }
 .feedback-cards__names {
-  width: 14.4rem;
+  width: 14.7rem;
   height: 6.4rem;
   padding-top: 0.5rem;
 }
@@ -590,9 +701,37 @@ body {
   line-height: 3.3rem;
   letter-spacing: 0.022rem;
 }
+.blogs__descrfield {
+  position: absolute;
+  top: 24.4rem;
+  left: 4.5rem;
+  height: 4.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.9rem 1rem 1.1rem 1rem;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+}
+.blogs__descrfield p {
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+  letter-spacing: 0.022rem;
+}
 .blogs__card {
   padding-top: 2.1rem;
   padding-left: 2.1rem;
+  position: relative;
+  border-radius: 6.2rem;
+  border: 1px solid #E7E7E7;
+  height: 51.5rem;
+  margin-bottom: 4rem;
 }
 .blogs__card__img {
   width: 34.5rem;
@@ -1017,14 +1156,19 @@ body {
   margin-bottom: 3.1rem;
 }
 .joinus__button {
-  position: relative;
-  display: flex;
-  align-items: center;
   width: 24.1rem;
   height: 7.1rem;
   background-color: #CDA274;
   border-radius: 1.8rem;
   filter: drop-shadow(1px 0px 18px rgba(0, 0, 0, 0.2));
+}
+.joinus__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 24.1rem;
+  height: 7.1rem;
+  text-decoration: none;
 }
 .joinus__btntext {
   color: #FFF;
@@ -1045,39 +1189,4 @@ body {
   position: absolute;
   top: 1.8rem;
   right: -7rem;
-}
-
-.footer {
-  height: 60.8rem;
-  padding-top: 5rem;
-}
-.footer__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.footer__top {
-  display: flex;
-  height: 37.4rem;
-  margin-bottom: 8rem;
-}
-.footer__interno {
-  width: 39.3rem;
-  margin-right: 1.6rem;
-}
-.footer__pages {
-  width: 21rem;
-  margin-right: 1.6rem;
-}
-.footer__explore {
-  width: 21rem;
-  margin-right: 1.6rem;
-}
-.footer__contact {
-  width: 33.7rem;
-}
-.footer__bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }/*# sourceMappingURL=style.css.map */

@@ -1,35 +1,107 @@
 .footer
-    padding: 8rem
-    background: #333333
-    &__logo
-        width: 12rem
-    &__list
-        /* убрать точки */
-        list-style: none
-        text-align: center
-    &__item
-        display: inline-block
+    height: 60.8rem
+    padding-top: 5rem
+    &__wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__top
+        display: flex
+        height: 37.4rem
+        margin-bottom: 8rem
+    &__interno
+        width: 39.3rem
+        margin-right: 1.6rem
+    &__pages
+        width: 21rem
+        margin-right: 1.6rem
+    &__explore
+        width: 21rem
+        margin-right: 1.6rem
+    &__contact
+        width: 33.7rem
+    &__socials
+        width: 33.3rem
+        height: 5.3rem
+        display: flex
+        justify-content: start
+        align-items: center
+    &__icon
         &:not(:last-child)
-            margin-right: 5rem
-        @include respond(tab-land)
-            &:not(:last-child)
-                margin-right: 1.6rem
-        @include respond(tab-port)
-            margin: 0
-            padding: 2rem
+            margin-right: 4rem
+    &__bottom
+        display: flex
+        justify-content: center
+        align-items: center
 
-    &__link
-        &:link, &:visited
-            color: $color-gray
+.interno
+    &__logo
+        width: 17.7rem
+        margin-bottom: 1.5rem
+    &__text
+        width: 32.6rem
+        margin-bottom: 0.98rem
+
+.footer-menu
+    &__title
+        color: #292F36
+        font-family: DM Serif Display
+        font-size: 2.5rem
+        font-style: normal
+        font-weight: 400
+        line-height: 3.75rem
+        letter-spacing: 0.022rem
+        margin-bottom: 2.1rem
+    &__text
+        color: #4D5053
+        font-family: Jost
+        font-size: 2.2rem
+        font-style: normal
+        font-weight: 400
+        line-height: 3.3rem
+        letter-spacing: 0.022rem
+        &_link
+            color: #CDA274
             text-decoration: none
-            text-transform: uppercase
-            font-size: $font-size-paragraph
-            letter-spacing: 0.2rem
-            font-weight: 300
-            /* Эфеекты не применимы к inline-элементам, поэтому делаем линки inline-block */
-            display: inline-block
-            transition: all .3s
-        &:hover
-            transform: rotate(5deg) scale(1.2)
-            color: $color-brown-dark
-            box-shadow: $box-shadow-light
+            padding-left: .5rem
+            margin-right: 1rem
+    &__item
+        list-style: none
+        margin-bottom: 3rem
+    &__link
+        text-decoration: none
+        color: #4D5053
+        font-family: Jost
+        font-size: 2.2rem
+        font-style: normal
+        font-weight: 400
+        line-height: 3.3rem
+        letter-spacing: 0.022rem
+.contact
+    &__title
+        color: #292F36
+        font-family: DM Serif Display
+        font-size: 2.5rem
+        font-style: normal
+        font-weight: 400
+        line-height: 3.75rem
+        letter-spacing: 0.022rem
+        margin-bottom: 2.2rem
+    &__text
+        color: #4D5053
+        font-family: Jost
+        font-size: 2.2rem
+        font-style: normal
+        font-weight: 400
+        line-height: 3.3rem
+        letter-spacing: 0.022rem
+        margin-bottom: 2.9rem
+    &__link
+        text-decoration: none
+        color: #4D5053
+        font-family: Jost
+        font-size: 2.2rem
+        font-style: normal
+        font-weight: 400
+        line-height: 3.3rem
+        letter-spacing: 0.022rem
