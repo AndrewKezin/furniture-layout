@@ -1,13 +1,17 @@
 .wrapper-white
-    max-width: 144rem
+    max-width: 1440px
     background-color: $color-white
-    margin: 0 auto
+    margin: auto
     position: relative
 
 .section-about
+    min-width: 1440px
     height: 83.1rem
     background: url("../img/bg-img.png") center / cover no-repeat
     margin-bottom: 8.5rem
+    @include respond(tab-land)
+        min-width: 1280px
+        margin-bottom: 5rem
 
     &__wrapper
         position: relative
@@ -17,6 +21,8 @@
         left: 12rem
         width: 60rem
         height: 38.6rem
+        @include respond(tab-land)
+            left: 22rem
 
         h1
             font-family: 'DM Serif Display'
@@ -65,18 +71,32 @@
 .section-2
     height: 39.5rem
     margin-bottom: 11.5rem
+    display: flex
+    justify-content: center
+    @include respond(tab-land)
+        margin-bottom: 9rem
+
     &__wrapper
         background-color: $color-white
     &__title
+        text-align: center
+        font-size: 2.5rem
+        line-height: 3.9rem
+        color: #292F36
         padding-top: 7.5rem
         margin-bottom: 1.7rem
     &__text
         display: block
         text-align: center
+        font-size: 2.2rem
+        line-height: 3.3rem
+        color: #4D5053
         &_1
             padding-left: 4.2rem
             padding-right: 4.1rem
             margin-bottom: 4.8rem
+            @include respond(tab-land)
+                margin-bottom: 1.8rem 
         &_2
             padding-left: 5.2rem
             padding-right: 5.1rem
@@ -100,7 +120,10 @@
 .section-3
     height: 63.5rem
     margin-bottom: 13.9rem
-
+    display: flex
+    justify-content: center
+    @include respond(tab-land)
+        margin-bottom: 9rem
     &__wrapper
         position: relative
         background-color: $color-white
@@ -114,15 +137,28 @@
     &__content
         width: 59.2rem
         height: 58.1rem
+        @include respond(tab-land)
+            width: 46rem
 
     &__title
+        font-size: 5rem
+        line-height: 6.5rem
+        color: #292F36
         padding-top: 1.3rem
         margin-bottom: 4.2rem
+        @include respond(tab-land)
+            padding-top: 0
+            margin-bottom: 2rem
     &__text
+        font-size: 2.2rem
+        line-height: 3.3rem
+        color: #4D5053
         text-align: left
         display: block
         width: 49.1rem
         margin-bottom: 4rem
+        @include respond(tab-land)
+            width: 46rem
     &__call-us
         width: 53.2rem
         height: 9.3rem
@@ -146,6 +182,8 @@
         width: 15.4rem
         height: 7.9rem
         padding-top: 0.6rem
+        @include respond(tab-land)
+            width: 17rem
     &__telnum
         font-family: 'Jost'
         font-style: normal
@@ -196,9 +234,12 @@
         right: 2.2rem
 
 .section-4
-    // height: 67.5rem
     margin-bottom: 14rem
     position: relative
+    display: flex
+    justify-content: center
+    @include respond(tab-land)
+        margin-bottom: 9rem
     &__wrapper
         background-color: #F4F0EC
         height: 67.5rem
@@ -218,18 +259,35 @@
 
 .section-5
     margin-bottom: 10rem
+    display: flex
+    justify-content: center
+    @include respond(tab-land)
+        margin-bottom: 8rem
     &__wrapper
         display: flex
+        @include respond(tab-land)
+            justify-content: center
 
 .section-6
     height: 185rem
     margin-bottom: 8rem
+    display: flex
+    justify-content: center
+    @include respond(tab-land)
+        height: 170rem
+        margin-bottom: 5rem
 
 .section-7
     height: 47.5rem
     margin-bottom: 14.5rem
     background: #F4F0EC
     padding-top: 14rem
+    display: flex
+    justify-content: center
+    @include respond(tab-land)
+        height: 40rem
+        padding-top: 10rem
+        margin-bottom: 9rem
 
 .counters
     display: flex
@@ -266,9 +324,18 @@
     height: 133rem
     padding-top: 1.5rem
     margin-bottom: 10rem
+    display: flex
+    justify-content: center
+    @include respond(tab-land)
+        height: 190rem
+        margin-bottom: 8rem
 
 .section-9
     margin-bottom: 7.98rem
+    display: flex
+    justify-content: center
+    @include respond(tab-land)
+        margin-bottom: 5rem
     &__wrapper
         height: 41.4rem
         background-color: #292F36
@@ -329,8 +396,6 @@
         position: absolute
         top: 1.8rem
         right: -7rem
-
-
 
 //     /* Медиаправило для изображения: для мониторов DPR:2 и ширины от 670px или для ширины монитора от 1340px */
 //     @media (min-resolution: 192dpi) and (min-width: 670px), (min-width: 1340px)

@@ -3,6 +3,8 @@
     column-gap: 2rem
     grid-template-columns: repeat(2, 1fr)
     grid-template-rows: 7.64rem 15.6rem 81.6rem 81.6rem
+    @include respond(tab-land)
+        grid-template-rows: 7.64rem 15.6rem 73rem 73rem
     &__title
         grid-area: 1 / 1 / 2 / 3
         padding-top: 1.34rem
@@ -27,9 +29,13 @@
             font-weight: 400
             line-height: 3.3rem
             letter-spacing: 0.022rem
+    &__img
+        display: block
+        margin-bottom: 2.5rem
     &__card
-        img
-            margin-bottom: 2.5rem
+        @include respond(tab-land)
+            display: flex
+            flex-direction: column
         &_1
             grid-area: 3 / 1 / 4 / 2
         &_2

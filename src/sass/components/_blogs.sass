@@ -2,10 +2,16 @@
     display: grid
     grid-template-columns: repeat(3, 1fr)
     grid-template-rows: 21.8rem 55.5rem 55.5rem
+    grid-template-areas: "title title title" "card-1 card-2 card-3" "card-4 card-5 card-6"
     column-gap: 2rem
     padding-top: 1.3rem
+    @include respond(tab-land)
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: 21.8rem 55.5rem 55.5rem 55.5rem
+        grid-template-areas: "title title" "card-1 card-2" "card-3 card-4" "card-5 card-6"
     &__title
-        grid-area: 1 / 1 / 2 / 4
+        // grid-area: 1 / 1 / 2 / 4
+        grid-area: title
         h5
             color: #292F36
             text-align: center
@@ -54,22 +60,33 @@
         border: 1px solid #E7E7E7
         height: 51.5rem
         margin-bottom: 4rem
+        @include respond(tab-land)
+            justify-self: center
+            padding-left: 1.5rem
+            padding-top: 1.5rem
+            padding-right: 1.5rem
         &__img
             width: 34.5rem
             height: 29.6rem
             margin-bottom: 1.5rem
         &_1
-            grid-area: 2 / 1 / 3 / 2
+            // grid-area: 2 / 1 / 3 / 2
+            grid-area: card-1
         &_2
-            grid-area: 2 / 2 / 3 / 3
+            // grid-area: 2 / 2 / 3 / 3
+            grid-area: card-2
         &_3
-            grid-area: 2 / 3 / 3 / 4
+            // grid-area: 2 / 3 / 3 / 4
+            grid-area: card-3
         &_4
-            grid-area: 3 / 1 / 4 / 2
+            // grid-area: 3 / 1 / 4 / 2
+            grid-area: card-4
         &_5
-            grid-area: 3 / 2 / 4 / 3
+            // grid-area: 3 / 2 / 4 / 3
+            grid-area: card-5
         &_6
-            grid-area: 3 / 3 / 4 / 4
+            // grid-area: 3 / 3 / 4 / 4
+            grid-area: card-6
     &__description
         color: #292F36
         font-family: DM Serif Display
@@ -86,6 +103,8 @@
         justify-content: space-between
         align-items: center
         padding-top: 0.96rem
+        @include respond(tab-land)
+            width: 37.5rem
     &__date
         color: #4D5053
         font-family: Jost

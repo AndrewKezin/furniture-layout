@@ -3,12 +3,17 @@
     justify-content: center
 
     &__card
-        margin-right: 1.8rem
+        &:not(:last-child)
+            margin-right: 1.8rem
         background-color: #fff
         border-radius: 3rem
         width: 35.4rem
         height: 28.7rem
         padding: 4.9rem 3rem 4.5rem 3.5rem
+        @include respond(tab-land)
+            width: 30rem
+            height: 28.7rem
+            padding: 3rem 2rem 3rem 2rem
     &__topwrapper
         display: flex
     &__photo
@@ -53,3 +58,5 @@
         &_3
             width: 27.4rem
             height: 9rem
+            @include respond(tab-land)
+                width: 26rem

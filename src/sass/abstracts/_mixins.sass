@@ -37,18 +37,18 @@
 @mixin respond($breakpoint)
     @if $breakpoint == phone
         /* only screen означает, что правило сработает только для экранов (на печать, например, не сработает) */
-        @media only screen and (max-width: 600px)
+        @media only screen and (max-width: 640px)
             @content
 
     @if $breakpoint == tab-port
-        @media only screen and (max-width: 900px)
+        @media only screen and (max-width: 940px)
             @content
 
     @if $breakpoint == tab-land
-        @media only screen and (max-width: 1240px)
+        @media only screen and (max-width: 1280px)
             @content
-    /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
-    /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
-    @if $breakpoint == big-screen
-        @media only screen and (min-width: 1800px)
-            @content
+    // /* В диапазоне от 1200px до 1800px будет применяться обычная декстопная версия без медиаправила */
+    // /* Версия для больших мониторов имеет не макс., а мин. ограничение ширины */
+    // @if $breakpoint == big-screen
+    //     @media only screen and (min-width: 1800px)
+    //         @content

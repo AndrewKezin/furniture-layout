@@ -16,14 +16,22 @@ html
 
 body
     background-color: #fff
+    display: flex
+    justify-content: center
+    height: 100%
 
 a
     -webkit-tap-highlight-color: transparent  // уберет синий прямоугольник (выделение) при нажатии в мобильной версии
 
 .container
     position: relative
-    max-width: 124rem
+    width: 1240px
     padding-left: 2rem
     padding-right: 2rem
     z-index: 0
-    margin: auto
+    @include respond(tab-land)
+        width: 940px
+    @include respond(tab-port)
+        width: 640px
+    @include respond(phone)
+        width: 360px

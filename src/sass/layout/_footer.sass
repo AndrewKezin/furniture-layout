@@ -1,6 +1,9 @@
 .footer
     height: 60.8rem
     padding-top: 5rem
+    margin-bottom: 3rem
+    display: flex
+    justify-content: center
     &__wrapper
         display: flex
         flex-direction: column
@@ -9,16 +12,27 @@
         display: flex
         height: 37.4rem
         margin-bottom: 8rem
+        @include respond(tab-land)
+            height: 50rem
+            margin-bottom: 3rem
+            display: grid
+            grid-template-columns: 2fr 1fr 1fr
+            grid-template-rows: 23rem 27rem
+            grid-template-areas: "interno pages explore" "contact pages explore"
     &__interno
+        grid-area: interno
         width: 39.3rem
         margin-right: 1.6rem
     &__pages
+        grid-area: pages
         width: 21rem
         margin-right: 1.6rem
     &__explore
+        grid-area: explore
         width: 21rem
         margin-right: 1.6rem
     &__contact
+        grid-area: contact
         width: 33.7rem
     &__socials
         width: 33.3rem
@@ -68,6 +82,7 @@
     &__item
         list-style: none
         margin-bottom: 3rem
+        
     &__link
         text-decoration: none
         color: #4D5053
@@ -77,6 +92,8 @@
         font-weight: 400
         line-height: 3.3rem
         letter-spacing: 0.022rem
+        &:hover
+            color: #CDA274
 .contact
     &__title
         color: #292F36
@@ -105,3 +122,5 @@
         font-weight: 400
         line-height: 3.3rem
         letter-spacing: 0.022rem
+        &:hover
+            color: #CDA274
