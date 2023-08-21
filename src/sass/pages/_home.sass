@@ -12,6 +12,10 @@
     @include respond(tab-land)
         min-width: 1280px
         margin-bottom: 5rem
+    @include respond(tab-port)
+        min-width: 940px
+        background: url("../img/bg-img-medium.png") center / cover no-repeat
+        margin-bottom: 5rem
 
     &__wrapper
         position: relative
@@ -23,6 +27,12 @@
         height: 38.6rem
         @include respond(tab-land)
             left: 22rem
+        @include respond(tab-port)
+            left: 30rem
+            height: 45rem
+            display: flex
+            flex-direction: column
+            align-items: center
 
         h1
             font-family: 'DM Serif Display'
@@ -32,8 +42,15 @@
             letter-spacing: 0.022rem
             color: #292F36
             margin-bottom: 1.9rem
+            @include respond(tab-port)
+                margin-bottom: 3.9rem
+                text-align: center
     &__text
         margin-bottom: 3.5rem
+        @include respond(tab-port)
+            margin-bottom: 7rem
+            text-align: center
+            color: #232425
 
 .section-about__button
     position: relative
@@ -54,7 +71,7 @@
         line-height: 27px
         letter-spacing: 0.72px
         color: #FFFFFF
-        padding-left: 3.4rem
+        padding-left: 1.5rem
         margin-right: 2.1rem
 .section-about__arr
     height: 7.1rem
@@ -67,6 +84,8 @@
         position: absolute
         top: 1.8rem
         right: 2rem
+        @include respond(tab-port)
+            top: 1.4rem
 
 .section-2
     height: 39.5rem
@@ -74,10 +93,17 @@
     display: flex
     justify-content: center
     @include respond(tab-land)
-        margin-bottom: 9rem
+        margin-bottom: 5rem
+    @include respond(tab-port)
+        height: 70rem
+        margin-bottom: 5rem
 
     &__wrapper
         background-color: $color-white
+        @include respond(tab-port)
+            display: flex
+            flex-direction: column
+            align-items: center
     &__title
         text-align: center
         font-size: 2.5rem
@@ -85,6 +111,8 @@
         color: #292F36
         padding-top: 7.5rem
         margin-bottom: 1.7rem
+        @include respond(tab-port)
+            padding-top: 2rem
     &__text
         display: block
         text-align: center
@@ -96,7 +124,7 @@
             padding-right: 4.1rem
             margin-bottom: 4.8rem
             @include respond(tab-land)
-                margin-bottom: 1.8rem 
+                margin-bottom: 1.8rem
         &_2
             padding-left: 5.2rem
             padding-right: 5.1rem
@@ -124,47 +152,39 @@
     justify-content: center
     @include respond(tab-land)
         margin-bottom: 9rem
+    @include respond(tab-port)
+        height: 80rem
+        margin-bottom: 7rem
+
     &__wrapper
         position: relative
-        background-color: $color-white
-        display: flex
-        justify-content: space-between
-        align-items: center
+        background-color: $color-white      
     &__img
         display: block
-        width: 53.2rem
-        height: 63.4rem
-    &__content
-        width: 59.2rem
-        height: 58.1rem
-        @include respond(tab-land)
-            width: 46rem
-
+        width: 100%
+        height: auto
     &__title
         font-size: 5rem
         line-height: 6.5rem
         color: #292F36
-        padding-top: 1.3rem
-        margin-bottom: 4.2rem
         @include respond(tab-land)
             padding-top: 0
-            margin-bottom: 2rem
+            margin-bottom: 2rem       
     &__text
         font-size: 2.2rem
         line-height: 3.3rem
         color: #4D5053
         text-align: left
         display: block
-        width: 49.1rem
-        margin-bottom: 4rem
+        width: 51rem
         @include respond(tab-land)
             width: 46rem
+        @include respond(tab-port)      
     &__call-us
         width: 53.2rem
-        height: 9.3rem
         display: flex
         justify-content: left
-        margin-bottom: 5rem
+        @include respond(tab-port)     
     &__callpic
         width: 9.3rem
         height: 9.3rem
@@ -200,18 +220,19 @@
         line-height: 33px
         letter-spacing: 0.22px
 
-.section-3__button
-    position: relative
-    background-color: #292F36
-    width: 26.3rem
-    height: 7.1rem
-    border: 2px solid #292F36
-    border-radius: 1.8rem
-    display: flex
-    justify-content: space-between
-    align-items: center
-    text-decoration: none
-    p
+    &__button
+        position: relative
+        background-color: #292F36
+        width: 26.3rem
+        height: 7.1rem
+        border-radius: 1.8rem
+        @include respond(tab-port)
+    &__link
+        text-decoration: none
+        display: flex
+        width: 26.3rem
+        height: 7.1rem
+    &__btntext
         font-family: 'Jost'
         font-style: normal
         font-weight: 400
@@ -219,19 +240,61 @@
         line-height: 27px
         letter-spacing: 0.72px
         color: #FFFFFF
+        width: 19.6rem
+        padding-top: 2.1rem
         padding-left: 3.4rem
-        margin-right: 2.1rem
-.section-3__arr
-    height: 7.1rem
-    position: relative
-    &_h
-        position: absolute
-        top: 3.6rem
-        right: 2.4rem
-    &_v
-        position: absolute
-        top: 1.8rem
-        right: 2.2rem
+        margin-right: 1.6rem
+        @include respond(tab-land)
+            width: 20rem
+            padding-left: 2.5rem
+    &__arr
+        width: 28px
+        height: 56px
+        padding-top: 15px
+        position: relative
+        &_h
+            position: absolute
+            top: 36px
+            left: 0px
+            @include respond(tab-land)
+                top: 33px
+        &_v
+            position: absolute
+            top: 19px
+            right: 0px
+            @include respond(tab-land)
+                top: 15px
+.block-3
+    display: grid
+    grid-template-columns: 60.8rem 59.2rem
+    grid-template-rows: 17rem 17.4rem 13.3rem 15.8rem
+    grid-template-areas: "title image" "text image" "call-us image" "button image"
+    @include respond(tab-land)
+        grid-template-columns: 450px 450px
+        grid-template-rows: 170px 174px 133px 158px
+    &__title
+        grid-area: title
+        padding-top: 4rem
+        @include respond(tab-land)
+            padding-top: 2rem
+    &__text
+        grid-area: text
+        padding-top: 4.2rem
+        @include respond(tab-land)
+            padding-top: 1rem
+    &__call-us
+        grid-area: call-us
+        padding-top: 4.2rem
+        @include respond(tab-land)
+            padding-top: 2rem
+    &__button
+        grid-area: button
+        padding-top: 5rem
+        @include respond(tab-land)
+            padding-top: 2rem
+    &__image
+        grid-area: image
+        align-self: center
 
 .section-4
     margin-bottom: 14rem

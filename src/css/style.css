@@ -878,6 +878,13 @@ body {
     margin-bottom: 5rem;
   }
 }
+@media only screen and (max-width: 940px) {
+  .section-about {
+    min-width: 940px;
+    background: url("../img/bg-img-medium.png") center/cover no-repeat;
+    margin-bottom: 5rem;
+  }
+}
 .section-about__wrapper {
   position: relative;
 }
@@ -893,6 +900,15 @@ body {
     left: 22rem;
   }
 }
+@media only screen and (max-width: 940px) {
+  .section-about__content {
+    left: 30rem;
+    height: 45rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .section-about__content h1 {
   font-family: "DM Serif Display";
   font-weight: 400;
@@ -902,8 +918,21 @@ body {
   color: #292F36;
   margin-bottom: 1.9rem;
 }
+@media only screen and (max-width: 940px) {
+  .section-about__content h1 {
+    margin-bottom: 3.9rem;
+    text-align: center;
+  }
+}
 .section-about__text {
   margin-bottom: 3.5rem;
+}
+@media only screen and (max-width: 940px) {
+  .section-about__text {
+    margin-bottom: 7rem;
+    text-align: center;
+    color: #232425;
+  }
 }
 
 .section-about__button {
@@ -926,7 +955,7 @@ body {
   line-height: 27px;
   letter-spacing: 0.72px;
   color: #FFFFFF;
-  padding-left: 3.4rem;
+  padding-left: 1.5rem;
   margin-right: 2.1rem;
 }
 
@@ -944,6 +973,11 @@ body {
   top: 1.8rem;
   right: 2rem;
 }
+@media only screen and (max-width: 940px) {
+  .section-about__arr_v {
+    top: 1.4rem;
+  }
+}
 
 .section-2 {
   height: 39.5rem;
@@ -953,11 +987,24 @@ body {
 }
 @media only screen and (max-width: 1280px) {
   .section-2 {
-    margin-bottom: 9rem;
+    margin-bottom: 5rem;
+  }
+}
+@media only screen and (max-width: 940px) {
+  .section-2 {
+    height: 70rem;
+    margin-bottom: 5rem;
   }
 }
 .section-2__wrapper {
   background-color: #FFFFFF;
+}
+@media only screen and (max-width: 940px) {
+  .section-2__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .section-2__title {
   text-align: center;
@@ -966,6 +1013,11 @@ body {
   color: #292F36;
   padding-top: 7.5rem;
   margin-bottom: 1.7rem;
+}
+@media only screen and (max-width: 940px) {
+  .section-2__title {
+    padding-top: 2rem;
+  }
 }
 .section-2__text {
   display: block;
@@ -1019,33 +1071,25 @@ body {
     margin-bottom: 9rem;
   }
 }
+@media only screen and (max-width: 940px) {
+  .section-3 {
+    height: 80rem;
+    margin-bottom: 7rem;
+  }
+}
 .section-3__wrapper {
   position: relative;
   background-color: #FFFFFF;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .section-3__img {
   display: block;
-  width: 53.2rem;
-  height: 63.4rem;
-}
-.section-3__content {
-  width: 59.2rem;
-  height: 58.1rem;
-}
-@media only screen and (max-width: 1280px) {
-  .section-3__content {
-    width: 46rem;
-  }
+  width: 100%;
+  height: auto;
 }
 .section-3__title {
   font-size: 5rem;
   line-height: 6.5rem;
   color: #292F36;
-  padding-top: 1.3rem;
-  margin-bottom: 4.2rem;
 }
 @media only screen and (max-width: 1280px) {
   .section-3__title {
@@ -1059,8 +1103,7 @@ body {
   color: #4D5053;
   text-align: left;
   display: block;
-  width: 49.1rem;
-  margin-bottom: 4rem;
+  width: 51rem;
 }
 @media only screen and (max-width: 1280px) {
   .section-3__text {
@@ -1069,10 +1112,8 @@ body {
 }
 .section-3__call-us {
   width: 53.2rem;
-  height: 9.3rem;
   display: flex;
   justify-content: left;
-  margin-bottom: 5rem;
 }
 .section-3__callpic {
   width: 9.3rem;
@@ -1116,20 +1157,20 @@ body {
   line-height: 33px;
   letter-spacing: 0.22px;
 }
-
 .section-3__button {
   position: relative;
   background-color: #292F36;
   width: 26.3rem;
   height: 7.1rem;
-  border: 2px solid #292F36;
   border-radius: 1.8rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-decoration: none;
 }
-.section-3__button p {
+.section-3__link {
+  text-decoration: none;
+  display: flex;
+  width: 26.3rem;
+  height: 7.1rem;
+}
+.section-3__btntext {
   font-family: "Jost";
   font-style: normal;
   font-weight: 400;
@@ -1137,23 +1178,95 @@ body {
   line-height: 27px;
   letter-spacing: 0.72px;
   color: #FFFFFF;
+  width: 19.6rem;
+  padding-top: 2.1rem;
   padding-left: 3.4rem;
-  margin-right: 2.1rem;
+  margin-right: 1.6rem;
 }
-
+@media only screen and (max-width: 1280px) {
+  .section-3__btntext {
+    width: 20rem;
+    padding-left: 2.5rem;
+  }
+}
 .section-3__arr {
-  height: 7.1rem;
+  width: 28px;
+  height: 56px;
+  padding-top: 15px;
   position: relative;
 }
 .section-3__arr_h {
   position: absolute;
-  top: 3.6rem;
-  right: 2.4rem;
+  top: 36px;
+  left: 0px;
+}
+@media only screen and (max-width: 1280px) {
+  .section-3__arr_h {
+    top: 33px;
+  }
 }
 .section-3__arr_v {
   position: absolute;
-  top: 1.8rem;
-  right: 2.2rem;
+  top: 19px;
+  right: 0px;
+}
+@media only screen and (max-width: 1280px) {
+  .section-3__arr_v {
+    top: 15px;
+  }
+}
+
+.block-3 {
+  display: grid;
+  grid-template-columns: 60.8rem 59.2rem;
+  grid-template-rows: 17rem 17.4rem 13.3rem 15.8rem;
+  grid-template-areas: "title image" "text image" "call-us image" "button image";
+}
+@media only screen and (max-width: 1280px) {
+  .block-3 {
+    grid-template-columns: 450px 450px;
+    grid-template-rows: 170px 174px 133px 158px;
+  }
+}
+.block-3__title {
+  grid-area: title;
+  padding-top: 4rem;
+}
+@media only screen and (max-width: 1280px) {
+  .block-3__title {
+    padding-top: 2rem;
+  }
+}
+.block-3__text {
+  grid-area: text;
+  padding-top: 4.2rem;
+}
+@media only screen and (max-width: 1280px) {
+  .block-3__text {
+    padding-top: 1rem;
+  }
+}
+.block-3__call-us {
+  grid-area: call-us;
+  padding-top: 4.2rem;
+}
+@media only screen and (max-width: 1280px) {
+  .block-3__call-us {
+    padding-top: 2rem;
+  }
+}
+.block-3__button {
+  grid-area: button;
+  padding-top: 5rem;
+}
+@media only screen and (max-width: 1280px) {
+  .block-3__button {
+    padding-top: 2rem;
+  }
+}
+.block-3__image {
+  grid-area: image;
+  align-self: center;
 }
 
 .section-4 {
