@@ -1,13 +1,25 @@
 .projects
+    width: 100%
     display: grid
     column-gap: 2rem
     grid-template-columns: repeat(2, 1fr)
     grid-template-rows: 7.64rem 15.6rem 81.6rem 81.6rem
+    grid-template-areas: "title title" "text text" "card-1 card-2" "card-3 card-4"
     @include respond(tab-land)
         grid-template-rows: 7.64rem 15.6rem 73rem 73rem
+    @include respond(tab-port)
+        grid-template-rows: repeat(4, auto)
+    @include respond(phone)
+        grid-template-columns: 100%
+        grid-template-rows: 7.64rem 24rem auto auto auto auto
+        grid-template-areas: "title" "text" "card-1" "card-2" "card-3" "card-4"
+        justify-items: center
+
     &__title
-        grid-area: 1 / 1 / 2 / 3
+        grid-area: title
         padding-top: 1.34rem
+        @include respond(tab-port)
+            margin-bottom: 10px
         h4
             color: #292F36
             text-align: center
@@ -18,8 +30,10 @@
             line-height: 6.24rem
             letter-spacing: .022rem
     &__text
-        grid-area: 2 / 1 / 3 / 3
+        grid-area: text
         padding-top: 2rem
+        @include respond(tab-port)
+            margin-bottom: 20px
         p
             color: #4D5053
             text-align: center
@@ -29,25 +43,38 @@
             font-weight: 400
             line-height: 3.3rem
             letter-spacing: 0.022rem
+            @include respond(phone)
+                font-size: 3rem
+                line-height: 5rem
+    &__br
+        @include respond(phone)
+            display: none
     &__img
         display: block
         margin-bottom: 2.5rem
+        @include respond(lab-port)
+            width: 100%
     &__card
         @include respond(tab-land)
             display: flex
             flex-direction: column
+        @include respond(phone)
+            width: 80%
+            max-width: 400px
         &_1
-            grid-area: 3 / 1 / 4 / 2
+            grid-area: card-1
         &_2
-            grid-area: 3 / 2 / 4 / 3
+            grid-area: card-2
         &_3
-            grid-area: 4 / 1 / 5 / 2
+            grid-area: card-3
         &_4
-            grid-area: 4 / 2 / 5 / 3
+            grid-area: card-4
 
     &__cardbottom
         display: flex
         justify-content: space-between
+        @include respond(tab-port)
+            margin-bottom: 20px
     &__description
         color: #292F36
         font-family: DM Serif Display
@@ -56,6 +83,9 @@
         font-weight: 400
         line-height: 3.75rem
         letter-spacing: 0.022rem
+        @include respond(phone)
+            font-size: 3.5rem
+            margin-bottom: 5px
     &__stylename
         color: #4D5053
         font-family: Jost
@@ -64,11 +94,16 @@
         font-weight: 400
         line-height: 3.3rem
         letter-spacing: 0.022rem
+        @include respond(phone)
+            font-size: 3rem
     &__link
         display: block
         width: 7rem
         height: 7rem
         text-decoration: none
+        @include respond(phone)
+            width: 10rem
+            height: 10rem
     &__button
         position: relative
         width: 7rem
@@ -76,6 +111,9 @@
         flex-shrink: 0
         border-radius: 10rem
         background: #F4F0EC
+        @include respond(phone)
+            width: 10rem
+            height: 10rem
     &__buttonarrow
         position: absolute
         top: 50%

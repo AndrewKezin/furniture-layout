@@ -2,26 +2,42 @@
     display: flex
     justify-content: center
     &__wrapper
+        width: 100%
         display: flex
-        justify-content: space-between
+        justify-content: space-around
         align-items: center
         height: 10.6rem
         background-color: $color-white
+        position: relative
+        
     &__logolink
         width: 177px
         height: 5rem
         display: block
         text-decoration: none
+        position: relative
+        @include respond(phone)
+            width: 120px
+        &_left
+            @include respond(phone)
+                width: 20px
+                height: 20px
+        &_right
+            @include respond(phone)
+                width: 110px
+                height: 17px
+                position: absolute
+                left: 10px
+                top: 3px
 
 .navigation
+    display: block
     &__list
         width: 51.8rem
         list-style: none
         display: flex
         justify-content: space-between
         align-items: center
-
-
     &__link
         text-decoration: none
         &:link, &:visited

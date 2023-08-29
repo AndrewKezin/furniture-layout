@@ -3,8 +3,7 @@
     padding: 0
     box-sizing: border-box
 html
-    font-size: 62.5%
-    /* Поскольку используем max-width, то медиаправила записываются от большего разрешения к меньшему и в конце пишется правило под min-width */
+    font-size: 62.5% // 1rem = 10px
     @include respond(tab-land)
         font-size: 56.25%
     @include respond(tab-port)
@@ -16,12 +15,9 @@ html
 
 body
     background-color: #fff
-    display: flex
-    justify-content: center
-    height: 100%
-
+   
 a
-    -webkit-tap-highlight-color: transparent  // уберет синий прямоугольник (выделение) при нажатии в мобильной версии
+    -webkit-tap-highlight-color: transparent  // уберет синий прямоугольник при нажатии в мобильной версии
 
 .container
     position: relative
@@ -30,8 +26,10 @@ a
     padding-right: 2rem
     z-index: 0
     @include respond(tab-land)
-        width: 940px
+        max-width: 940px
     @include respond(tab-port)
-        width: 640px
+        // max-width: 640px
+        max-width: 98vw
     @include respond(phone)
-        width: 360px
+        max-width: 98vw
+       

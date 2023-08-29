@@ -1,0 +1,26 @@
+// Swiper slider settings
+.swiper
+    width: 100%
+    height: auto
+    @include respond(phone)
+        height: 200px
+
+.swiper-slide
+    text-align: center
+    font-size: 20px
+    background: #F4F0EC
+    display: flex
+    justify-content: center
+    align-items: center
+
+.swiper-slide img
+    display: block
+    width: 77px
+    height: auto
+    object-fit: cover
+
+.swiper-button-next, .swiper-button-prev
+    color: #292F36
+
+.swiper-pagination-bullet-active
+    background: #292F36

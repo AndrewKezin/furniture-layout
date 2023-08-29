@@ -1,36 +1,49 @@
 .footer
-    height: 60.8rem
-    padding-top: 5rem
-    margin-bottom: 3rem
+    height: 608px
+    padding-top: 50px
+    margin-bottom: 30px
     display: flex
     justify-content: center
+    @include respond(tab-port)
+        height: auto
+        padding-top: 10px
+        margin-bottom: 10px
+    @include respond(phone)
+        height: auto
+        margin-bottom: 10px
     &__wrapper
-        display: flex
-        flex-direction: column
-        align-items: center
-    &__top
-        display: flex
-        height: 37.4rem
-        margin-bottom: 8rem
+        width: 100%
+        display: grid
+        grid-template-columns: 393px 210px 210px 337px
+        grid-template-rows: 374px 33px
+        column-gap: 16px
+        row-gap: 116px
+        grid-template-areas: "interno pages explore contact" "bottom bottom bottom bottom"
         @include respond(tab-land)
-            height: 50rem
-            margin-bottom: 3rem
+            height: 500px
+            margin-bottom: 30px
             display: grid
             grid-template-columns: 2fr 1fr 1fr
-            grid-template-rows: 23rem 27rem
-            grid-template-areas: "interno pages explore" "contact pages explore"
+            grid-template-rows: 220px 250px 80px
+            row-gap: 0
+            grid-template-areas: "interno pages explore" "contact pages explore" "bottom bottom bottom"
+            justify-items: center
+        @include respond(tab-port)
+            height: auto
+            grid-template-rows: 180px 230px 40px
+        @include respond(phone)
+            grid-template-columns: 60% 40%
+            grid-template-rows: 190px 190px 80px
+            grid-template-areas: "interno pages" "contact explore" "bottom bottom"
+            column-gap: 0
+            height: auto
+            margin-bottom: 0
     &__interno
         grid-area: interno
-        width: 39.3rem
-        margin-right: 1.6rem
     &__pages
         grid-area: pages
-        width: 21rem
-        margin-right: 1.6rem
     &__explore
         grid-area: explore
-        width: 21rem
-        margin-right: 1.6rem
     &__contact
         grid-area: contact
         width: 33.7rem
@@ -44,9 +57,12 @@
         &:not(:last-child)
             margin-right: 4rem
     &__bottom
+        grid-area: bottom
         display: flex
         justify-content: center
         align-items: center
+        @include respond(phone)
+            flex-direction: column
 
 .interno
     &__logo
@@ -66,19 +82,30 @@
         line-height: 3.75rem
         letter-spacing: 0.022rem
         margin-bottom: 2.1rem
+        @include respond(phone)
+            font-size: 2.8rem
     &__text
         color: #4D5053
         font-family: Jost
-        font-size: 2.2rem
+        font-size: 1.8rem
         font-style: normal
         font-weight: 400
         line-height: 3.3rem
         letter-spacing: 0.022rem
+        @include respond(phone)
+            font-size: 2.5rem
+        &_left
+            @include respond(phone)
+                margin-bottom: 10px
         &_link
             color: #CDA274
             text-decoration: none
             padding-left: .5rem
             margin-right: 1rem
+    &__text-top
+        @include respond(phone)
+            font-size: 2.5rem
+            margin-bottom: 10px
     &__item
         list-style: none
         margin-bottom: 3rem
@@ -94,6 +121,8 @@
         letter-spacing: 0.022rem
         &:hover
             color: #CDA274
+        @include respond(phone)
+            font-size: 2.5rem
 .contact
     &__title
         color: #292F36
@@ -113,6 +142,8 @@
         line-height: 3.3rem
         letter-spacing: 0.022rem
         margin-bottom: 2.9rem
+        @include respond(phone)
+            font-size: 2.5rem
     &__link
         text-decoration: none
         color: #4D5053
@@ -122,5 +153,7 @@
         font-weight: 400
         line-height: 3.3rem
         letter-spacing: 0.022rem
+        @include respond(phone)
+            font-size: 2.5rem
         &:hover
             color: #CDA274

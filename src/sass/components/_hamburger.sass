@@ -1,0 +1,69 @@
+.hamb
+    display: none
+    @include respond(phone)
+        display: flex
+        align-items: center
+    &__field
+        width: 50px
+        height: 50px
+        background: #fff
+        border-radius: 10px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        cursor: pointer
+    &__bar
+        display: block
+        width: 30px
+        height: 2px
+        margin: 4px auto
+        background-color: #4D5053
+        transition: .2s
+
+.popup-menu
+    display: none
+    @include respond(phone)
+        display: flex
+        justify-content: center
+        width: 100vw
+        height: calc(100vh - 50px)
+        position: absolute
+        top: 50px
+        right: 100%
+        background-color: #fff
+        opacity: .9
+        transition: .2s
+        z-index: 100
+
+.popup-menu.open
+    right: 0
+
+.hamb__field.active .hamb__bar
+    &:nth-child(1)
+        transform: translateY(10px) rotate(-45deg)
+    &:nth-child(2)
+        opacity: 0
+    &:nth-child(3)
+        transform: translateY(-10px) rotate(45deg)
+
+body.noscroll
+    overflow: hidden
+
+
+.header__wrapper .navigation
+    @include respond(phone)
+        display: none
+
+.popup-menu .navigation__list
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    font-size: 20px
+    padding: 50px 0
+    overflow: auto
+    &>li
+        margin-bottom: 30px
